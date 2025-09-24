@@ -1,11 +1,3 @@
-.charaBox {
-    position: relative;
-    width: 50vw;
-    height: 128px;
-    background: linear-gradient(to right, #c53d43, transparent);
-    z-index: 1;
-}
-
 .characterExp {
     position: relative;
     width: 100vw;
@@ -17,7 +9,7 @@
 .infoBox {
     position: absolute;
     width: 80%;
-    height: 33rem;
+    height: 33%;
     top: 50%;
     z-index: 1;
 }
@@ -72,3 +64,4 @@ body.sirafuji .infoBox {
         transform: translate(0);
     }
 }
+
