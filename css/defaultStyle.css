@@ -1,18 +1,17 @@
-html {
-    overflow: auto;
-    overflow-x: hidden;
-    overflow-y: scroll;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-body {
-    width:100%;
+html, body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 header {
+    width: 100%;
     height: 64px;
     position: sticky;
     background: linear-gradient(to right, #5a79ba, #fef4f4);
-    width: 100%;
 }
 
 .headerNav a {
@@ -32,7 +31,7 @@ header {
 .headerNav ul li {
     width: 100%;
     max-width: 64px;
-    padding: 1em;
+    padding: 1rem;
 }
 
 
@@ -43,5 +42,4 @@ header {
 
 .TAGS ul{
     list-style: none;
-
 }
