@@ -1,4 +1,10 @@
-
+.charaBox {
+    position: relative;
+    width: 50vw;
+    height: 128px;
+    background: linear-gradient(to right, #c53d43, transparent);
+    z-index: 1;
+}
 
 .characterExp {
     position: relative;
@@ -11,7 +17,7 @@
 .infoBox {
     position: absolute;
     width: 80%;
-    height: 33%;
+    height: 15rem;
     top: 50%;
     z-index: 1;
 }
