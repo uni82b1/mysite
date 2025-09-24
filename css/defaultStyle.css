@@ -25,6 +25,8 @@ header {
     display: flex;
     flex-wrap: nowrap;
     list-style: none;
+    padding-left: 2rem;
+    padding-right: 0;
 }
 
 .headerNav ul li {
@@ -41,4 +43,5 @@ header {
 
 .TAGS ul{
     list-style: none;
+
 }
