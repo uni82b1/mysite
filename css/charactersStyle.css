@@ -90,7 +90,7 @@ body.sirafuji .infoBox {
     }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 720px) {
     .characterInfo {
         font-size: 0.8rem;
         padding: 0.4
@@ -101,4 +101,5 @@ body.sirafuji .infoBox {
         font-size: 1.2rem;
     }
 }
+
 
