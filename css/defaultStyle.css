@@ -26,9 +26,12 @@ header {
 }
 
 .headerNav ul {
+    max-width: 100%;
     display: flex;
     flex-wrap: nowrap;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .headerNav ul li {
@@ -69,5 +72,4 @@ header {
 @keyframes reveal {
     from { width: 0; }
     to { width: 100%; }
-
 }
