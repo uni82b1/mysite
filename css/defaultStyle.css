@@ -40,6 +40,15 @@ header {
     margin: 1rem;
 }
 
+@media (max-width: 360px) {
+    .headerNav ul li {
+        font-size: 0.8rem;
+    }
+    .enName {
+        font-size: 0.5rem;
+    }
+}
+
 .category {
     /* -- 基本設定 -- */
     /* -- 位置設定 -- */
@@ -73,3 +82,4 @@ header {
     from { width: 0; }
     to { width: 100%; }
 }
+
