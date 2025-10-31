@@ -34,7 +34,7 @@ header {
 .headerNav ul li {
     color: #fff;
     width: 100%;
-    margin: 1rem 6%;
+    margin: 1rem;
 }
 
 .category {
@@ -69,4 +69,5 @@ header {
 @keyframes reveal {
     from { width: 0; }
     to { width: 100%; }
+
 }
