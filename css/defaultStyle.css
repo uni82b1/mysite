@@ -45,7 +45,7 @@ header {
         font-size: 0.8rem;
     }
     .enName {
-        font-size: 0.4rem;
+        font-size: 0.5rem;
     }
 }
 
@@ -82,5 +82,6 @@ header {
     from { width: 0; }
     to { width: 100%; }
 }
+
 
 
