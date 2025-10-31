@@ -1,17 +1,22 @@
-html, body {
-    width: 100%;
-    overflow-x: hidden;
+body {
+    max-width: 960px;
+    margin: auto;
+    padding: 1rem 0;
 }
 
-.column{
+img, iframe, embed, object, video {
+    max-width: 100%;
+}
+
+.column {
     display: flex;
 }
 
 header {
-    width: 100%;
+    margin: auto;
+    max-width: 810px;
     height: 64px;
-    position: sticky;
-    background: linear-gradient(to right, #5a79ba, #fef4f4);
+    background: #0000ff;
 }
 
 .headerNav a {
@@ -27,17 +32,41 @@ header {
 }
 
 .headerNav ul li {
+    color: #fff;
     width: 100%;
-    max-width: 64px;
-    padding: 1rem;
+    margin: 1rem 6%;
 }
 
-
-.title {
-    color: black;
-    text-decoration: none;
+.category {
+    /* -- 基本設定 -- */
+    /* -- 位置設定 -- */
+    animation: reveal 0.4s ease-in-out forwards;
 }
 
-.TAGS ul{
-    list-style: none;
+.category .Ge {
+    height: 10rem;
+    background: linear-gradient(to right, #202020 33%, transparent);
+}
+.category .FA {
+    height: 10rem;
+    background: linear-gradient(to right, #fff 33%, transparent);
+}
+
+.category img {
+    padding-left: 5%;
+    padding-top: 1.5rem;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes reveal {
+    from { width: 0; }
+    to { width: 100%; }
 }
