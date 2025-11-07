@@ -1,10 +1,13 @@
+const script = document.currentScript;
+const scriptDir = script.src.substring(0, script.src.lastIndexOf('/'));
 // 画像と確率（%）を設定
 const images = [
-    { src: "../images/preparing0.gif", probability: 80 },
-    { src: "../images/preparing1.gif", probability: 20 },
+    { src: scriptDir + '/../images/preparing0.gif', probability: 80 },
+    { src: scriptDir + '/../images/preparing1.gif', probability: 20 },
     ];
 
 // 合計確率（100でなくてもOK）を計算
+
 const total = images.reduce((sum, img) => sum + img.probability, 0);
 
 // ランダム値を生成
