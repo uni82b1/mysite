@@ -34,7 +34,7 @@
     <hr>
     <h3 id="0">0. 事前準備</h3>
     <h4>GitHubのアカウントを作成する</h4>
-    <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub · Change is constant. GitHub keeps you ahead. · GitHub（新しいタブで開きます）</a></p>
+    <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub · Change is constant. GitHub keeps you ahead. · GitHub<br>（新しいタブで開きます）</a></p>
     <p>メールアドレス、パスワード、アカウント名を入れて終わりです。簡単ですね。</p>
     <img src="images/Webサイトの作り方/画像3.PNG" style="width: 100%; max-width: 640px;">
     <p>アカウント名はこんな感じでプロジェクト名と共にサイトのURLになります。</p>
@@ -86,6 +86,14 @@
     <code>User-agent: *<br>Disallow: /
     </code></div>
     <p>…robots.txtというファイルを作成してこの2行をコピペでOK。</p>
+    <details><summary><b>補足：検索エンジンに載せてもいいが？の場合</b></summary>
+        <p>（ある程度基本的な構成ができるまで&ある程度セキュリティについて知見を得るまでは載せない方がいいという前提として、）
+        例えばGoogle検索に出してやってもいいが？という感じなら</p>
+        <div class="code">
+        <code>User-agent: Googlebot<br>Allow: *
+        </code></div>
+        <p>…とか書いたりすればいいと思います。ちなみにこのコードを書くとGoogleのBotくんは「ほな…✋😎」って感じでサイトの"全て"を漁りだします。𝕏のrobots.txtを読解できるようになったら色々弄ればいいんじゃないですかね。</p>
+    </details>
     <details><summary><b>蛇足：AI対策がどうたら</b></summary>
         <p>「AI学習に関してはBlueskyの方が危ない」という声があったのはこれが理由。<br>
         bsky.app/robots.txt と検索すればわかるのですがBlueskyのrobots.txtは、</p>
@@ -126,7 +134,7 @@
             <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;p>Hello, world!&lt;/p><br>
             <br>
-            &lt;/body><br>https://nanext.alcnanext.jp/anetn/student/stlogin/index/shizuoka_univ_eng
+            &lt;/body><br>
         </code></div>
     <p>…index.htmlというファイルを作成してこれをコピペすると、<br>Hello, world! と表示されます。あとはbody内を自由に編集しましょう。</p>
     <br>
