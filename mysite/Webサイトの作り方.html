@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Webサイトの作り方</title>
+    <link rel="stylesheet" href="css/Webサイトの作り方.css" />
+</head>
+<body>
+    <div class="column">
+        <a href="index.html">
+            <img src="images/home.PNG" width="48px" />
+        </a>
+        <a href="劇情戦浄.html">
+            <img src="images/icon_Ge1.PNG" width="48px"/>
+        </a>
+        <a href="ファンアートおきば.html">
+            <img src="images/icon_FA1.PNG" width="42px" style="padding: 3px 3px"/>
+        </a>
+        <a href="Webサイトの作り方.html">
+            <img src="images/icon_HtMW1.PNG" width="48px" style="margin: 6px 0px"/>
+        </a>
+    </div>
+
+
+    <h3>HTMLとCSSを使った基礎的なWebサイト作成の解説です。</h3>
+    <a href="https://uni82b1.github.io/demo/" target="_blank" rel="noopener noreferrer">デモサイトを表示（新しいタブで開きます）</a>
+    <h4>目次</h4>
+    <ol start="0">
+        <li><a href="#0">事前準備</a></li>
+        <li><a href="#1">サイトの作成</a></li>
+        <li><a href="#2">サイトの公開・編集</a></li>
+        <li>サイトの飾りつけ（HTML編）</li>
+        <li>サイトの飾りつけ（CSS編）</li>
+    </ol>
+    <hr>
+    <h3 id="0">0. 事前準備</h3>
+    <h4>GitHubのアカウントを作成する</h4>
+    <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub · Change is constant. GitHub keeps you ahead. · GitHub<br>（新しいタブで開きます）</a></p>
+    <p>メールアドレス、パスワード、アカウント名を入れて終わりです。簡単ですね。</p>
+    <img src="images/Webサイトの作り方/画像3.PNG" style="width: 100%; max-width: 640px;">
+    <p>アカウント名はこんな感じでプロジェクト名と共にサイトのURLになります。</p>
+    <br>
+    <hr>
+    <h4>VisualStudioCodeを入れる（PCのみ）</h4>
+    <p><a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">Download Visual Studio Code - Mac, Linux, Windows（新しいタブで開きます）</a></p>
+    <p>それぞれの環境に合ったものをダウンロードしてください。<p>
+    <p>ダウンロード後、VScodeを起動します。<br>
+        画面左端のアクティビティバーにある<img src="images/Webサイトの作り方/画像1.png" style="width: 2rem; vertical-align: bottom;">のアイコンを押し、以下の拡張機能を導入しましょう。</p>
+    <ul>
+        <li><b>Live Server</b></li>
+        <p>…ローカル環境で実際の動作を確認することができるようになります。<br>
+        　画面下部のステータスバーにある<img src="images/Webサイトの作り方/画像2.png" style="height: 1rem; vertical-align: middle;">から使用できます。</p>
+        <li><b>Japanese Language Pack for Visual Studio Code</b></li>
+        <p>… VScodeを日本語で使えるようになります。</p>
+    </ul>
+
+    <details>
+        <summary><b>補足：追加で導入すると便利な拡張機能</b></summary>
+        <ul>
+            <li><b>Auto Rename Tag</b></li>
+            <p>…タグを編集した際に対のタグを自動的に編集してくれるやつ</p>
+            <li><b>Code Spell Checker</b></li>
+            <p>…誤った記述をハイライトしてくれるやつ</p>
+            <li><b>indent-rainbow</b></li>
+            <p>…インデントが見やすくなるやつ</p>
+            <li><b>Path Intellisense</b></li>
+            <p>…参照しているファイルの場所が分かりやすくなるやつ</p>
+            <li><b>Prettier - Code formatter</b></li>
+            <p>…内容によって文字の色が変わるやつ</p>
+        </ul>
+    </details>
+    <br>
+    <hr>
+    <h3 id="1">1. サイトの作成</h3>
+    <h4>ルートフォルダを作成する</h4>
+    <p>デスクトップでもどこでも、お好みの場所で右クリックしフォルダを作成します。<br>
+    デスクトップだと家族に見られそうでなんか心配！という場合は<div class="code"><code>C:\Users\（ユーザー名）</code></div>
+    …にwebsitesフォルダを作成し、<br>その中にサイト名のフォルダ（mysiteとか）を作成するとよいかもしれません。</p>
+    <img src="images/Webサイトの作り方/画像3.PNG" style="width: 100%; max-width: 640px;">
+    <p>こんな感じでユーザー名と共にサイトのURLになります。</p>
+    <br>
+    <hr>
+    <h4>robots.txtを作成する</h4>
+    <p>検索エンジンやデータ収集Botに対して巡回の許可/不許可を定めるやつ。</p>
+    <p>検索エンジンにも載せたくない、Botの巡回もされたくない、という場合は</p>
+    <div class="code">
+    <code>User-agent: *<br>Disallow: /
+    </code></div>
+    <p>…robots.txtというファイルを作成してこの2行をコピペでOK。</p>
+    <details><summary><b>補足：検索エンジンに載せてもいいが？の場合</b></summary>
+        <p>（ある程度基本的な構成ができるまで&ある程度セキュリティについて知見を得るまでは載せない方がいいという前提として、）
+        例えばGoogle検索に出してやってもいいが？という感じなら</p>
+        <div class="code">
+        <code>User-agent: Googlebot<br>Allow: *
+        </code></div>
+        <p>…とか書いたりすればいいと思います。ちなみにこのコードを書くとGoogleのBotくんは「ほな…✋😎」って感じでサイトの"全て"を漁りだします。𝕏のrobots.txtを読解できるようになったら色々弄ればいいんじゃないですかね。</p>
+    </details>
+    <details><summary><b>蛇足：AI対策がどうたら</b></summary>
+        <p>「AI学習に関してはBlueskyの方が危ない」という声があったのはこれが理由。<br>
+        bsky.app/robots.txt と検索すればわかるのですがBlueskyのrobots.txtは、</p>
+        <div class="code">
+        <code># By default, may crawl anything on this domain.<br>User-Agent: *<br>Allow: /
+        </code></div>
+    <p>…という記述の通り基本的には全てのデータ収集Botに対して巡回を許可しています（2025/12/25時点）。
+        一方でx.com/robots.txt を確認してみると、</p>
+        <div class="code">
+        <code># Every bot that might possibly read and respect this file<br>
+            # ========================================================<br>
+            User-agent: *<br>
+            Disallow: /<br>
+        </code></div>
+    <p>…という感じで、<br>研究目的だろうがAIだろうが𝕏の巡回や情報収集はさせないよ、Grokはするけど<br>と言っているわけです（2025/12/25時点）。</p>
+    <p>とはいえrobots.txtも100%確実なわけではないので、まあ。</p>
+    </details>
+    <br>
+    <hr>
+    <h4>index.htmlを作成する</h4>
+    <p>いちばん最初に表示される玄関口のページ。</p>
+    <div class="code">
+        <code>
+            &lt;head><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--このページなら「Webサイトの作り方」がここに入る --><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title>ここにタイトルを入力&lt;/title><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- 使用するcssファイルがある場所の相対リンクを記入する --><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="（ファイル名）.css"><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- 検索避けをしたい場合 --><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="robots" content="noindex"><br>
+            <br>
+            &lt;/head><br>
+            <br>
+            &lt;body><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p>Hello, world!&lt;/p><br>
+            <br>
+            &lt;/body><br>
+        </code></div>
+    <p>…index.htmlというファイルを作成してこれをコピペすると、<br>Hello, world! と表示されます。あとはbody内を自由に編集しましょう。</p>
+    <p>最終的に、最低限以下のファイルさえ揃っていれば、</p>
+    <div class="code">
+        <code>mysite/<br>┗ index.html<br>┗ robots.txt</code></div>
+    <p>…サイトができます。</p>
+    <br>
+    <hr>
+    <h3 id="2">2. サイトの公開・編集</h3>
+    <h4>サイトを公開する</h4>
+    <p>GitHubにログインし、<img src="images/Webサイトの作り方/画像4.png" style="width: 10rem; vertical-align: bottom;"><b>New repository</b>を押して</p>
+    <img src="images/Webサイトの作り方/画像5.png" style="width: 100%; max-width: 640px;">
+    <p><b>Repository name</b>にサイト名（mysiteとか）を記入します。<br>
+    （Description以下は特にいじらなくてOK）</p>
+    <img src="images/Webサイトの作り方/画像6.png" style="width: 100%; max-width: 640px;">
+    <p>Quick setupの<b>uploading an existing file</b>を押して、</p>
+    <img src="images/Webサイトの作り方/画像7.png" style="width: 100%; max-width: 640px;">
+    <p><br>robots.txtとindex.html（というかフォルダの中身）をアップロードし<br>
+        <b>Commit changes</b>を押します。<br>
+        zipファイルを上げても動かないから気を付けような！（1敗）</p>
+    <img src="images/Webサイトの作り方/画像10.png" style="width: 100%; max-width: 640px;">
+    <p>ファイルを上げたら<b>Settings</b>の<b>Pages</b>からBranchの[None]を[main]に変えて</p>
+    <img src="images/Webサイトの作り方/画像8.png" style="width: 100%; max-width: 640px;">
+    <p>数分待てばサイトを見ることができます！<br>
+    これでサイトができました！おめでとう、これで君も𝒆𝒏𝒈𝒊𝒏𝒆𝒆𝒓の仲間入りだ！</p>
+    <br>
+    <hr>
+    <h4>サイトを編集する</h4>
+    <p>ローカルで新規ページを作成、または既存ページを編集した後、<br>GitHubの上部メニューにある<b>Code</b>を押し<img src="images/Webサイトの作り方/画像9.png" style="height: 4rem; vertical-align: bottom;">の<b>Upload files</b>を押します。<br>
+    あとはアップロードすれば編集された部分だけGithubが編集してくれます。便利。
+    </p>
+    <br>
+    <h3 id="3">3. サイトの飾りつけ（HTML編）</h3>
+    <p>このカテゴリーは編集中です！m(_ _)m</p>
+    <hr>
+    <h3 id="4">4. サイトの飾りつけ（CSS編）</h3>
+    <p>このカテゴリーは編集中です！m(_ _)m</p>
+    <hr>
+    <br>
+    <p style="text-align: center;"><a href="index.html">ホームに戻る</a></p>
+</body>
+</html>
